@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://beta.pokeapi.co/graphql/v1beta",
+    "target": "https://pokeapi.co/api/v2",
     "secure": false
   }
 }

@@ -1,3 +1,171 @@
+.type-label {
+    border-style: solid none;
+    border-width: 1px;
+    border-radius: 8px; /* Increased from 5px to 8px for more rounded corners */
+    padding: 0.15em;
+    font-size: 9pt;
+    color: #F8F8F8;
+    text-shadow: 0px 1px 1px #807870;
+}
+
+.type-normal {
+    background: #A8A77A;
+    border-top-color: #DAD5AE;
+    border-bottom-color: #6D6D4E;
+}
+
+.type-fire {
+    background: #EE8130;
+    border-top-color: #F0C5A0;
+    border-bottom-color: #9C4E00;
+}
+
+.type-water {
+    background: #6390F0;
+    border-top-color: #A5BFF0;
+    border-bottom-color: #1D5ED0;
+}
+
+.type-electric {
+    background: #F7D02C;
+    border-top-color: #FAE088;
+    border-bottom-color: #C2A700;
+}
+
+.type-grass {
+    background: #7AC74C;
+    border-top-color: #B0E07B;
+    border-bottom-color: #4E8B20;
+}
+
+.type-ice {
+    background: #96D9D6;
+    border-top-color: #C7EFEF;
+    border-bottom-color: #5EBFBE;
+}
+
+.type-fighting {
+    background: #C22E28;
+    border-top-color: #E07D78;
+    border-bottom-color: #8A1C18;
+}
+
+.type-poison {
+    background: #A33EA1;
+    border-top-color: #D184CF;
+    border-bottom-color: #6D246C;
+}
+
+.type-ground {
+    background: #E2BF65;
+    border-top-color: #F0DBA0;
+    border-bottom-color: #A78931;
+}
+
+.type-flying {
+    background: #A98FF3;
+    border-top-color: #D1C5F7;
+    border-bottom-color: #7761C8;
+}
+
+.type-psychic {
+    background: #F95587;
+    border-top-color: #F8C0B0;
+    border-bottom-color: #789010;
+}
+
+.type-bug {
+    background: #A6B91A;
+    border-top-color: #D1DE73;
+    border-bottom-color: #6D7808;
+}
+
+.type-rock {
+    background: #B6A136;
+    border-top-color: #DFD28A;
+    border-bottom-color: #7D6A0F;
+}
+
+.type-ghost {
+    background: #735797;
+    border-top-color: #A998C0;
+    border-bottom-color: #4A3461;
+}
+
+.type-dragon {
+    background: #6F35FC;
+    border-top-color: #B29BF7;
+    border-bottom-color: #3E089C;
+}
+
+.type-dark {
+    background: #705746;
+    border-top-color: #A39080;
+    border-bottom-color: #443529;
+}
+
+.type-steel {
+    background: #B7B7CE;
+    border-top-color: #E2E2ED;
+    border-bottom-color: #7D7D98;
+}
+
+.type-fairy {
+    background: #D685AD;
+    border-top-color: #F0C5D4;
+
+    border-bottom-color: #9C4E75;
+}
+
+
+.pokemon-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+/* Pokémon grid styles */
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.pokemon-item {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px; /* Increased from 8px to 10px for more rounded corners */
+    text-align: center;
+    padding: 20px 10px;
+    transition: transform 0.2s;
+}
+
+.pokemon-item:hover {
+    transform: translateY(-10px);
+}
+
+.pokemon-item img {
+    max-width: 100px;
+    height: auto;
+}
+
+.pokemon-item h3 {
+    margin: 15px 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.pokemon-item p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
 .pokemon-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -36,3 +204,4 @@
     color: #777;
     font-size: 14px;
 }
+

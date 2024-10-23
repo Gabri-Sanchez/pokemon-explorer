@@ -49,4 +49,9 @@ export class PokemonService {
     return result;
 
   }
+
+  async fetchPokemon(pokeId: number){
+    const data:any = await fetch("/api/"+ pokeId);
+    return await data;
+  }
 }
