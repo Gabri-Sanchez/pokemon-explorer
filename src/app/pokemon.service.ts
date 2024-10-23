@@ -3,6 +3,7 @@ import { Apollo, gql } from 'apollo-angular';
 import { Injectable } from '@angular/core';
 import { PokemonData} from './pokemon-data';
 import { pokeData } from './poke-data.json'
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -50,8 +51,7 @@ export class PokemonService {
 
   }
 
-  async fetchPokemon(pokeId: number){
-    const data:any = await fetch("/api/"+ pokeId);
-    return await data;
+  fetchPokemon(pokeId: number): Observable<PokemonData>{
+    return this.http.get<PokemonData>('/api/pokemon/'+pokeId);
   }
 }
