@@ -5,5 +5,12 @@
     "pathRewrite": {"^/api": ""},
     "changeOrigin": true
 
+  },
+  "/graphql": {
+    "target": "https://beta.pokeapi.co/graphql/v1beta",
+    "secure": false,
+    "pathRewrite": {"^/graphql": ""},
+    "changeOrigin": true
+
   }
 }

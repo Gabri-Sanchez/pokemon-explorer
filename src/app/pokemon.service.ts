@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Apollo, gql } from 'apollo-angular';
 import { Injectable } from '@angular/core';
-import { PokemonData} from './pokemon-data';
+import { PokemonData, PokemonResponse} from './pokemon-data';
 import { pokeData } from './poke-data.json'
 import { Observable } from 'rxjs';
 @Injectable({
@@ -39,6 +39,7 @@ export class PokemonService {
       });
  */  }
 
+
   getPokemons(){
 
     let randomNumber: number;
@@ -51,7 +52,47 @@ export class PokemonService {
 
   }
 
-  fetchPokemon(pokeId: number): Observable<PokemonData>{
-    return this.http.get<PokemonData>('/api/pokemon/'+pokeId);
+
+  fetchPokemon(pokeId: number) {
+    let isLoading: boolean;
+    let pokemon: PokemonResponse;
+    return this.apollo.watchQuery<PokemonResponse>({
+      query: gql`
+        query Pokemon($id: Int) {
+          pokemon_v2_pokemon(
+            where: {
+              id: { _eq: $id }
+              pokemon_v2_pokemonsprites: { sprites: {} }
+            }
+          ) {
+            name
+            pokemon_v2_pokemontypes {
+              pokemon_v2_type {
+                name
+              }
+            }
+            pokemon_v2_pokemonsprites(where: { id: { _eq: $id } }) {
+              sprites(path: "other.official-artwork")
+            }
+          }
+          pokemon_v2_region {
+            name
+          }
+          pokemon_v2_ability {
+            name
+          }
+          pokemon_v2_pokemonspecies {
+            name
+          }
+        }
+      `,
+      variables: {
+        id: pokeId,
+      },
+    })
+    .valueChanges;
+    ;
   }
+
+
 }
