@@ -52,8 +52,11 @@ export class PokemonService {
 
   }
 
+  fetchPokemon(pokeId: number){
 
-  fetchPokemon(pokeId: number) {
+  }
+
+  gqlfetchPokemon(pokeId: number) {
     let isLoading: boolean;
     let pokemon: PokemonResponse;
     return this.apollo.watchQuery<PokemonResponse>({
