@@ -1,2 +1,45 @@
-<p>{{pokemon}}</p>
-<p>{{error}}</p>
+<div class="pokemon-container" *ngIf="pokemonDetails">
+  <h1>{{ pokemonDetails.pokemon_v2_pokemon[0].name | titlecase }}</h1>
+
+  <section class="pokemon-sprites">
+    <img
+      *ngFor="let sprite of pokemonDetails.pokemon_v2_pokemon[0].pokemon_v2_pokemonsprites"
+      [src]="sprite.sprites.front_default"
+      alt="{{ pokemonDetails.pokemon_v2_pokemon[0].name }} sprite"
+      class="pokemon-image"
+    />
+  </section>
+
+  <section class="pokemon-types">
+    <h2>Types</h2>
+    <div class="mini-window">
+      <ul>
+        <li *ngFor="let type of pokemonDetails.pokemon_v2_pokemon[0].pokemon_v2_pokemontypes">
+          {{ type.pokemon_v2_type.name | titlecase }}
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pokemon-regions">
+    <h2>Regions</h2>
+    <div class="mini-window">
+      <ul>
+        <li *ngFor="let region of pokemonDetails.pokemon_v2_region">
+          {{ region.name | titlecase }}
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pokemon-abilities">
+    <h2>Abilities</h2>
+    <div class="mini-window">
+      <ul>
+        <li *ngFor="let ability of pokemonDetails.pokemon_v2_ability">
+          {{ ability.name | titlecase }}
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>

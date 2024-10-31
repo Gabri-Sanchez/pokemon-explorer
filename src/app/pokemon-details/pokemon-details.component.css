@@ -1,0 +1,60 @@
+.pokemon-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.pokemon-sprites {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pokemon-image {
+  max-width: 120px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* Consistent mini-window styling */
+.mini-window {
+  max-height: 150px; /* Adjust height for different sections if needed */
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0.3rem 0;
+  font-size: 0.9rem; /* Slightly smaller font size for compactness */
+  color: #666;
+  background-color: #f0f0f0;
+  margin-bottom: 0.3rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
